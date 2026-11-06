@@ -19,3 +19,7 @@ MCP native traces, metrics and logs were independently searchable in the approve
 ## Optional never-expiring tokens
 
 Connect offers Never expires as an explicit choice;24h remains selected by default. Sends expiresInHours:null, lists expiresAt:null as Never expires. API0.11.0/contract1.1.0 must be deployed before this docs update. Existing tokens are unchanged. MCP0.1.0 consumes the same opaque credential and needs no package update. No live grant was created or altered for verification.
+
+## Swagger UI
+
+/swagger/ is the actual self-hosted Swagger UI5.34.1, built from pinned swagger-ui-dist assets. It loads the canonical /openapi.json, initially selects preprod, supports all documented HTTP methods through explicit Try it out/Execute, and keeps bearer credentials in memory. Query configuration overrides and external validation are disabled; request targets are bounded to official production/preprod external APIs. The compact /api/ reference remains available. No authenticated write request is part of browser verification.
