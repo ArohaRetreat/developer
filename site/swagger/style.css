@@ -1,0 +1,24 @@
+.swagger-main { min-width: 0; }
+.swagger-main h1 { margin-bottom: .3em; }
+#swagger-ui { margin: 2rem -1rem; color: #233c34; }
+#swagger-ui .wrapper { padding: 0 1rem; }
+#swagger-ui .info { margin: 1.5rem 0; }
+#swagger-ui .info .title { font-size: 1.7rem; overflow-wrap: anywhere; }
+#swagger-ui .scheme-container { background: #f0f3e9; box-shadow: none; padding: 1.25rem 0; }
+#swagger-ui select { max-width: 100%; }
+#swagger-ui .opblock-summary-path { min-width: 0; overflow-wrap: anywhere; }
+#swagger-ui .opblock-summary { flex-wrap: wrap; gap: .4rem; }
+#swagger-ui .opblock-summary-description { min-width: 8rem; }
+#swagger-ui .highlight-code { max-width: 100%; overflow-x: auto; }
+#swagger-ui .dialog-ux .modal-ux { max-height: 88vh; overflow-y: auto; }
+#swagger-ui .btn { border-radius: 8px; }
+@media (max-width: 600px) {
+ #swagger-ui { margin-inline: -.5rem; }
+ #swagger-ui .wrapper { padding: 0 .5rem; }
+ #swagger-ui .opblock .opblock-summary-path { max-width: calc(100% - 6rem); font-size: .85rem; }
+ #swagger-ui .opblock-summary-operation-id { font-size: .75rem; overflow-wrap: anywhere; }
+ #swagger-ui .dialog-ux .modal-ux { width: calc(100% - 1rem); }
+}
+#swagger-ui .btn.authorize { color: #174b3a; border-color: #174b3a; }
+#swagger-ui .btn.authorize svg { fill: #174b3a; }
+#swagger-ui .btn.execute { color: white; background: #174b3a; border-color: #174b3a; }

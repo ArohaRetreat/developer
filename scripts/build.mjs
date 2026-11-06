@@ -22,3 +22,8 @@ await writeFile(
 );
 await writeFile("dist/robots.txt", "User-agent: *\nAllow: /\n");
 console.log("Built developer docs");
+// Serve only the pinned Swagger runtime files, never its example initializer/spec.
+await mkdir('dist/swagger/assets', {recursive:true});
+for (const file of ['swagger-ui-bundle.js','swagger-ui-bundle.js.LICENSE.txt','swagger-ui.css','LICENSE','NOTICE']) {
+  await cp(new URL('../node_modules/swagger-ui-dist/'+file,import.meta.url),'dist/swagger/assets/'+file);
+}
