@@ -17,5 +17,5 @@ test('Swagger renders canonical operations with scoped authorization and guarded
  const request=config.requestInterceptor({url:'https://aroharetreat.com/api/external/v1/reservations',method:'POST'});
  assert.equal(request.credentials,'omit');assert.equal(request.redirect,'error');
  for(const url of ['https://example.com/api/external/v1/runtime','https://aroharetreat.com/api/v1/runtime-config','https://user:pass@aroharetreat.com/api/external/v1/runtime'])assert.throws(()=>config.requestInterceptor({url}));
- assert.match(status.textContent,/Contract 1.1.0/);
+ assert.match(status.textContent,/Contract 1.2.0/);
 });

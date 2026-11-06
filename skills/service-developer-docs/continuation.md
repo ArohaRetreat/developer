@@ -23,3 +23,7 @@ Connect offers Never expires as an explicit choice;24h remains selected by defau
 ## Swagger UI
 
 /swagger/ is the actual self-hosted Swagger UI5.34.1, built from pinned swagger-ui-dist assets. It loads the canonical /openapi.json, initially selects preprod, supports all documented HTTP methods through explicit Try it out/Execute, and keeps bearer credentials in memory. Query configuration overrides and external validation are disabled; request targets are bounded to official production/preprod external APIs. The compact /api/ reference remains available. No authenticated write request is part of browser verification.
+
+## CRUD documentation candidate — issue1
+
+Prepared0.4.0 with canonical REST1.2.0/106 fixed MCP0.2.0 mappings. Compact reference is generated from OpenAPI; Swagger loads the same file. Connect defaults to the original read-only ceiling and offers explicit CRUD scopes/client binding with existing Never expires. Three local tests, build and21foundation tests pass. This source note does not prove docs publication, backend deployment or npm publication. Update provenance to reviewed API SHA before release.

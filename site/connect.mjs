@@ -15,25 +15,17 @@ const q = (s) => document.querySelector(s),
 const config = await (await fetch("/firebase-config.json")).json();
 const auth = getAuth(initializeApp(config));
 await setPersistence(auth, inMemoryPersistence);
-const scopes = [
-  "runtime:read",
-  "availability:read",
-  "calendar:read",
-  "reservations:read",
-  "inventory:read",
-  "content:published:read",
-  "communications:read",
-];
-for (const scope of scopes) {
-  const label = document.createElement("label"),
-    input = document.createElement("input");
-  input.type = "checkbox";
-  input.value = scope;
-  input.name = "scope";
-  input.checked = true;
-  label.append(input, document.createTextNode(scope));
-  q("#scope-fields").append(label);
+const readScopes=['runtime:read','availability:read','calendar:read','reservations:read','inventory:read','content:published:read','communications:read'];
+const contract=await (await fetch('/token-contract.json')).json();
+const allScopes=contract.$defs.create.properties.scopes.items.enum;
+const readOnly=()=>q('#token-mode').value==='read-only';
+function renderScopes(){
+ q('#scope-fields').replaceChildren();
+ for(const scope of readOnly()?readScopes:allScopes){const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.value=scope;input.name='scope';input.checked=readScopes.includes(scope);input.disabled=scope==='runtime:read';label.append(input,document.createTextNode(scope));q('#scope-fields').append(label);}
+ q('#generate').textContent=readOnly()?'Create read-only token':'Create scoped CRUD token';
+ result.hidden=true;q('#secret').textContent='';
 }
+q('#token-mode').addEventListener('change',renderScopes);renderScopes();
 const api = () =>
   q("#environment").value === "pre-prod"
     ? "https://aroha-retreat-preprod.web.app"
@@ -121,7 +113,7 @@ onAuthStateChanged(auth, (user) => {
   result.hidden = true;
   q("#secret").textContent = "";
   status.textContent = user
-    ? "Signed in. Choose the environment and read scopes for your token."
+    ? "Signed in. Choose the environment, mode and scopes for your token."
     : "Sign in with your existing Aroha Google account.";
   if (user) void list();
   else q("#tokens").replaceChildren();
@@ -136,15 +128,16 @@ forms.addEventListener("submit", async (e) => {
   const button = q("#generate");
   button.disabled = true;
   result.hidden = true;
-  status.textContent = "Creating a read-only token…";
+  status.textContent = "Creating the selected scoped token…";
   try {
     const body = {
       name: q("#token-name").value,
       scopes: [...document.querySelectorAll("input[name=scope]:checked")].map(
         (x) => x.value,
       ),
-      purpose: "mcp-readonly",
+      purpose: readOnly()?"mcp-readonly":"mcp",
       rowAccess: q("#staff-access").checked ? "all" : "own",
+      ...(q("#client-id").value.trim()?{clientId:q("#client-id").value.trim()}:{}),
       expiresInHours: q("#expiry").value === "never" ? null : Number(q("#expiry").value),
     };
     const data = await call("", { method: "POST", body });
