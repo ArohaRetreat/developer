@@ -15,3 +15,7 @@ GoDaddy saved developer CNAME -> aroha-retreat-developer.web.app. Authoritative,
 MCP native traces, metrics and logs were independently searchable in the approved tenant from one synthetic exporter observation; real authenticated MCP-to-API linkage remains unverified. Real Google sign-in/token issuance remains a separate acceptance gate. Token issuance/revocation require explicit user action; do not automatically create live verification credentials.
 
 39 API operations and nine read-only MCP tools are implemented. The broader planned lifecycle CRUD is still tracked under website105/70; do not treat the complete strategy inventory as shipped.
+
+## Optional never-expiring tokens
+
+Connect offers Never expires as an explicit choice;24h remains selected by default. Sends expiresInHours:null, lists expiresAt:null as Never expires. API0.11.0/contract1.1.0 must be deployed before this docs update. Existing tokens are unchanged. MCP0.1.0 consumes the same opaque credential and needs no package update. No live grant was created or altered for verification.

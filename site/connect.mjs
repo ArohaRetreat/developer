@@ -70,8 +70,8 @@ async function list() {
       name.textContent = t.name;
       detail.textContent =
         (t.active ? "Active" : "Revoked") +
-        " · expires " +
-        new Date(t.expiresAt).toLocaleString();
+        " · " +
+        (t.expiresAt === null ? "Never expires" : "Expires " + new Date(t.expiresAt).toLocaleString());
       text.append(name, detail);
       row.append(text);
       if (t.active) {
@@ -145,7 +145,7 @@ forms.addEventListener("submit", async (e) => {
       ),
       purpose: "mcp-readonly",
       rowAccess: q("#staff-access").checked ? "all" : "own",
-      expiresInHours: Number(q("#expiry").value),
+      expiresInHours: q("#expiry").value === "never" ? null : Number(q("#expiry").value),
     };
     const data = await call("", { method: "POST", body });
     q("#secret").textContent = data.token;
