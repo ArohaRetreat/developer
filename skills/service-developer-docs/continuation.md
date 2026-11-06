@@ -27,3 +27,11 @@ Connect offers Never expires as an explicit choice;24h remains selected by defau
 ## CRUD documentation candidate — issue1
 
 Prepared0.4.0 with canonical REST1.2.0/106 fixed MCP0.2.0 mappings. Compact reference is generated from OpenAPI; Swagger loads the same file. Connect defaults to the original read-only ceiling and offers explicit CRUD scopes/client binding with existing Never expires. Three local tests, build and21foundation tests pass. This source note does not prove docs publication, backend deployment or npm publication. Update provenance to reviewed API SHA before release.
+
+## Contract 1.3 / docs 0.5.0 — 2026-11-06
+
+Website 0.27.1 and API 0.13.0 independently verified in production at a4d28dcac352650511f4987dd007c63f6c9f9a2f after preprod validation. OpenAPI 121 operations / SHA256 d7928c6bef9015eeba3dc2a8fdd19f14211227df3d67ef63385c5f96e2f07aab. Customer lookup, verified history claim, nightly wallets, manual quote/confirmation and bounded staff history/summary share website policies.
+
+MCP 0.3.0 merged/tested at d038721ec28fbdc814c71c47bf6e6468487dd95a but npm authentication expired; not yet published. npm 0.2.0 remains the published package. Public overview/MCP guide and provenance distinguish these states; update only after matching registry integrity and fresh-cache execution. No live token was minted.
+
+PR9 is the docs release candidate. Deploy only reviewed merged source to aroha-retreat-developer; verify release.json, canonical schema hash, Swagger and production/preprod URL bounds. No business writes or credential issuance are part of docs verification.
