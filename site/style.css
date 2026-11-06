@@ -478,6 +478,7 @@ select {
   margin-top: 5px;
 }
 .secret {
+  display: block;
   white-space: pre-wrap;
   word-break: break-all;
   background: #183329;
