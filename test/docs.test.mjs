@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 test("developer reference excludes unfinished routes and protects guest deployment target", async () => {
   const api = JSON.parse(await readFile("site/openapi.json"));
-  assert.equal(api.info.version, "1.0.0");
+  assert.equal(api.info.version, "1.1.0");
   assert.ok(api.paths["/reservations"]);
   assert.equal(api.paths["/payments"], undefined);
   const firebase = JSON.parse(await readFile("firebase.json"));
