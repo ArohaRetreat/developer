@@ -35,3 +35,7 @@ Website 0.27.1 and API 0.13.0 independently verified in production at a4d28dcac3
 MCP 0.3.0 merged/tested at d038721ec28fbdc814c71c47bf6e6468487dd95a but npm authentication expired; not yet published. npm 0.2.0 remains the published package. Public overview/MCP guide and provenance distinguish these states; update only after matching registry integrity and fresh-cache execution. No live token was minted.
 
 PR9 is the docs release candidate. Deploy only reviewed merged source to aroha-retreat-developer; verify release.json, canonical schema hash, Swagger and production/preprod URL bounds. No business writes or credential issuance are part of docs verification.
+
+## Final 0.5.0 release preparation
+
+MCP0.3 publisher authentication completed and npm accepted publication. Before merging/deploying this final source, verify public registry metadata, downloaded tarball SHA512 and fresh-cache CLI0.3.0 execution. Public guides/provenance now describe that final published state; do not deploy if those checks fail. API/source and schema pins remain unchanged. Includes updated release impact plan and changelog. Earlier pending-auth sections above are historical checkpoints.

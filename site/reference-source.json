@@ -5,8 +5,9 @@
   "mcpRepository": "https://github.com/ArohaRetreat/mcp",
   "packageName": "@theharithsa/aroha-mcp",
   "packageVersion": "0.3.0",
-  "status": "API 0.13.0 and website 0.27.1 verified live in production; MCP 0.3.0 source merged and tested, npm publication awaiting publisher authentication",
+  "status": "API 0.13.0 and website 0.27.1 verified live in production; MCP 0.3.0 published with matching reviewed tarball integrity",
   "openapiSha256": "d7928c6bef9015eeba3dc2a8fdd19f14211227df3d67ef63385c5f96e2f07aab",
   "mcpSourceRevision": "d038721ec28fbdc814c71c47bf6e6468487dd95a",
-  "publishedPackageVersion": "0.2.0"
+  "publishedPackageVersion": "0.3.0",
+  "packageIntegrity": "sha512-b0D0P5X4ObuokdBxpEJzgQeR7yl502CEWn/pdQ6YAEolrVOsg07H9LMdAAIOuS4kDgQdPf1nY85RilyWSwzjRw=="
 }
