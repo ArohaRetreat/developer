@@ -1,8 +1,12 @@
+import {renderReference} from './reference.mjs';
 import { cp, mkdir, writeFile, readFile, rm } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist", { recursive: true });
 await cp("site", "dist", { recursive: true });
+const api=JSON.parse(await readFile('site/openapi.json'));
+const template=await readFile('site/api/index.html','utf8');
+await writeFile('dist/api/index.html',template.replace('<!-- generated-reference -->',renderReference(api)));
 const revision = execFileSync("git", ["rev-parse", "HEAD"], {
   encoding: "utf8",
 }).trim();

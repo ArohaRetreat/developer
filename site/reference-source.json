@@ -1,9 +1,9 @@
 {
   "apiRepository": "https://github.com/ArohaRetreat/website",
-  "apiSourceRevision": "547ee8f5da79d56a89a0e84346a940cab071ca8d",
-  "contractVersion": "1.1.0",
+  "apiSourceRevision": "94df55d78ba3c081c2607ba5a10a006a8999c12c",
+  "contractVersion": "1.2.0",
   "mcpRepository": "https://github.com/ArohaRetreat/mcp",
   "packageName": "@theharithsa/aroha-mcp",
-  "packageVersion": "0.1.0",
+  "packageVersion": "0.2.0",
   "status": "source-contract; deployment evidence recorded separately"
 }
