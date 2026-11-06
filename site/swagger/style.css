@@ -19,3 +19,6 @@
  #swagger-ui .opblock-summary-operation-id { font-size: .75rem; overflow-wrap: anywhere; }
  #swagger-ui .dialog-ux .modal-ux { width: calc(100% - 1rem); }
 }
+#swagger-ui .btn.authorize { color: #174b3a; border-color: #174b3a; }
+#swagger-ui .btn.authorize svg { fill: #174b3a; }
+#swagger-ui .btn.execute { color: white; background: #174b3a; border-color: #174b3a; }
