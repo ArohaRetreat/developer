@@ -1,42 +1,42 @@
 {
   "$schema": "schemas/project.schema.json",
   "schemaVersion": 1,
-  "name": null,
+  "name": "aroha-developer",
   "template": {
     "repository": "theharithsa/app-launchpad-template",
-    "revision": null,
+    "revision": "f04c042a9e000f606982863518fa7bb9cfbb7d85",
     "version": "1.9.0"
   },
   "decisions": {
     "product": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "approved",
+      "value": "Separate developer.aroharetreat.com documentation for API and MCP",
+      "approval": "User request6November2026"
     },
     "stack": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "proposed",
+      "value": "Static HTML/CSS/ES modules; Firebase Google identity on Connect",
+      "approval": "Implementation choice in existing Firebase architecture"
     },
     "hosting": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "proposed",
+      "value": "Independent Firebase Hosting site aroha-retreat-developer in existing project",
+      "approval": "Implementation choice in existing Firebase architecture"
     },
     "privacy": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "proposed",
+      "value": "In-memory Google session; no tokens/PII in browser storage or telemetry",
+      "approval": "Implementation choice in existing Firebase architecture"
     },
     "observability": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "proposed",
+      "value": "Public docs deployment/source evidence; MCP telemetry documented separately",
+      "approval": "Implementation choice in existing Firebase architecture"
     },
     "license": {
-      "status": "needs-user-input",
-      "value": null,
-      "approval": null
+      "status": "proposed",
+      "value": "Inherited MIT template license",
+      "approval": "Implementation choice in existing Firebase architecture"
     }
   }
 }

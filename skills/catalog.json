@@ -92,6 +92,18 @@
         "app-launchpad",
         "ian-xiaohei-illustrations"
       ]
+    },
+    {
+      "id": "service-developer-docs",
+      "kind": "service",
+      "path": "skills/service-developer-docs/SKILL.md",
+      "description": "Maintain the developer-docs service; read its implementation and continuation context.",
+      "dependsOn": [
+        "project-implementation",
+        "project-testing",
+        "project-deployment",
+        "project-observability"
+      ]
     }
   ],
   "services": [
@@ -119,6 +131,31 @@
       ],
       "continuation": "skills/service-foundation-tooling/continuation.md",
       "lastReviewedRevision": "953717c787dd37d1500c04767f818f4e0a0faffd"
+    },
+    {
+      "id": "developer-docs",
+      "skillId": "service-developer-docs",
+      "sourcePaths": [
+        "site"
+      ],
+      "entrypoints": [
+        "site/index.html",
+        "site/connect.mjs"
+      ],
+      "owner": "ArohaRetreat",
+      "status": "active",
+      "dependsOn": [],
+      "contracts": [
+        "site/openapi.json",
+        "firebase.json"
+      ],
+      "testCommands": [
+        "npm test",
+        "npm run build",
+        "sh scripts/check.sh"
+      ],
+      "continuation": "skills/service-developer-docs/continuation.md",
+      "lastReviewedRevision": null
     }
   ]
 }
