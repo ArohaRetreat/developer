@@ -22,11 +22,11 @@ class FoundationTests(unittest.TestCase):
 
     def fixture(self):
         root = self.base / 'repo'
-        for name in (*foundation.REQUIRED, 'project.json'):
+        for name in (*foundation.REQUIRED, 'project.json', 'firebase.json'):
             output = root / name
             output.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / name, output)
-        for name in ('scripts', 'skills', '.agents', 'schemas', 'docs'):
+        for name in ('scripts', 'skills', '.agents', 'schemas', 'docs', 'site'):
             shutil.copytree(ROOT / name, root / name, dirs_exist_ok=True,
                             ignore=shutil.ignore_patterns('__pycache__'))
         return root
