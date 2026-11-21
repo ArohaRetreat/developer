@@ -1,3 +1,10 @@
+## 0.6.0 — API 0.19.0 reference
+
+- Publish the website release's canonical REST contract 1.5.0 and 122 operations in the API reference and Swagger UI.
+- Document staff reservation search, cursor pagination and the early checkout flag.
+- Identify the published MCP 0.3.0 package and its 121-tool contract separately from the REST reference.
+- Link to the Host Studio handbook for the browser account directory.
+
 ## 0.5.0 — customers, manual bookings and nightly credits
 
 - Mirror REST contract 1.3.0 and its 121 typed MCP operations, with live API provenance.

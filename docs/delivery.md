@@ -22,3 +22,7 @@ These practices and the bundled skill were adopted from [App Launchpad 1.14.0](h
 ## Prepared0.5.0 — issue8
 
 The candidate reference contains contract1.3.0/121operations and MCP0.3.0, with scoped manual booking/customer-linking/credit/ledger/feedback guides. OpenAPI, token scopes and MCP tools are copied from their canonical sources. Final merged API/npm provenance must be pinned before publication. Tests/build/foundation and zero production dependency vulnerabilities pass locally. Deploy Hosting only to aroha-retreat-developer; never deploy website functions or create a real token during documentation verification.
+
+## 0.6.0
+
+Build from the reviewed developer repository revision with `npm ci`, `npm run build` and `npm test`. Compare `site/openapi.json` and `site/token-contract.json` with the website release's canonical source. Verify the public `release.json`, API reference and Swagger on both developer domains after deploying Hosting to `aroha-retreat-developer`. Use the published npm revision when describing MCP capabilities.
