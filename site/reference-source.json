@@ -1,13 +1,16 @@
 {
   "apiRepository": "https://github.com/ArohaRetreat/website",
-  "apiSourceRevision": "a4d28dcac352650511f4987dd007c63f6c9f9a2f",
-  "contractVersion": "1.3.0",
+  "apiSourceRevision": "e1462a65575d32e84c50b28758e38574e1911e43",
+  "contractVersion": "1.5.0",
   "mcpRepository": "https://github.com/ArohaRetreat/mcp",
   "packageName": "@theharithsa/aroha-mcp",
   "packageVersion": "0.3.0",
-  "status": "API 0.13.0 and website 0.27.1 verified live in production; MCP 0.3.0 published with matching reviewed tarball integrity",
-  "openapiSha256": "d7928c6bef9015eeba3dc2a8fdd19f14211227df3d67ef63385c5f96e2f07aab",
+  "status": "External REST contract 1.5.0 from the website 0.34.0 and API 0.19.0 release source. Published MCP 0.3.0 uses contract 1.3.0.",
+  "openapiSha256": "9db7cb3d6e9216cdac8c3d5f8e1089889e77cedaf47e61009d5c4a6e1538fe43",
   "mcpSourceRevision": "d038721ec28fbdc814c71c47bf6e6468487dd95a",
   "publishedPackageVersion": "0.3.0",
-  "packageIntegrity": "sha512-b0D0P5X4ObuokdBxpEJzgQeR7yl502CEWn/pdQ6YAEolrVOsg07H9LMdAAIOuS4kDgQdPf1nY85RilyWSwzjRw=="
+  "packageIntegrity": "sha512-b0D0P5X4ObuokdBxpEJzgQeR7yl502CEWn/pdQ6YAEolrVOsg07H9LMdAAIOuS4kDgQdPf1nY85RilyWSwzjRw==",
+  "apiRuntimeVersion": "0.19.0",
+  "websiteVersion": "0.34.0",
+  "mcpContractVersion": "1.3.0"
 }
