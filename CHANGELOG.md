@@ -1,3 +1,7 @@
+## 0.6.1 — Swagger UI maintenance
+
+- Update the bundled Swagger UI to 5.36.0 for the REST 1.5.0 reference.
+
 ## 0.6.0 — API 0.19.0 reference
 
 - Publish the website release's canonical REST contract 1.5.0 and 122 operations in the API reference and Swagger UI.
